@@ -19,12 +19,46 @@ Code is super easy in markdown, which you can easily do inline `(require net/url
 (require net/url)
 ```
 
-### My Library: (library name here)
+### My Library: 1.4 Plotting Multiple 2D Renderers
 Write what you did!
 Remember that this report must include:
  
 * a narrative of what you did
+
+In this assignement, I worked with the graph plotting library. I made 2-dimensional two graphs. Each graph has two functions with tables that shows what color line corresponds to which function. The first graph plots the functions: 
+y = 3x and y= x^2. This graph has the x and y axis going through the graph while the second graph doesn't. The second graph has the functions: cos(x) and sin(x). I've change the style of the line for the cos function so it is dotted instead of a solid line.
+
 * the code that you wrote
+
+```
+#lang racket
+
+(require plot)
+
+(define (double x)( * 2 x))
+(define (square x)( * x x))
+(define (triple x)( * 2 x))
+ 
+;;(plot(function cos(- pi) pi #:label "y = cos(x)" ))
+
+(plot (list(axes)
+           (function square -2 2
+                     #:label "y = x^2 "
+                     #:color "red")
+           (function triple -2 2 
+                     #:label "y = 3x"
+                     #:color "blue")))
+
+(plot (list (function cos (- pi) pi
+                      #:label "y = cos(x)"
+                      #:color "black"
+                      #:style 'dot)
+            (function sin (- pi) pi
+                      #:label "y = cos(x)"
+                      #:color "green")))
+   
+
+```
 * output from your code demonstrating what it produced
 * any diagrams or figures explaining your work 
  
