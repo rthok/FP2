@@ -60,6 +60,10 @@ y = 3x and y= x^2. This graph has the x and y axis going through the graph while
 
 ```
 * output from your code demonstrating what it produced
+
+1. [Screen shot of the first graph] (https://github.com/rthok/image/issues/2)
+2. [Screen shot of the second graph] (https://github.com/rthok/image/issues/3)
+
 * any diagrams or figures explaining your work 
  
 The narrative itself should be no longer than 350 words. Yes, you can add more files and link or refer to them. This is github, handling files is awesome and easy!
